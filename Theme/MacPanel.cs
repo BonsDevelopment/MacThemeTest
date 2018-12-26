@@ -17,6 +17,10 @@ namespace MacTheme.Theme
 
         internal int CircleSize = 14;
 
+        /// <summary>
+        /// Because regions can't be smoothed, we custom draw the circles to put place the buttons on 
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnPaint(PaintEventArgs e)
         {
             SolidBrush exitBtnBrush = new SolidBrush(Color.FromArgb(255, 85, 81));

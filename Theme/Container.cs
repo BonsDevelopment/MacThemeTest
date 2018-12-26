@@ -42,14 +42,14 @@ namespace MacTheme.Theme
             TitleBar.Controls.Add(Maximize);
 
 
-            EventSubscription();
+            EventSubscriptions();
         }
 
 
         private bool mouseDown = false;
         private Point lastLocation;
 
-        private void EventSubscription()
+        private void EventSubscriptions()
         {
             Exit.Click += Exit_Click;
             Minimize.Click += Minimize_Click;
@@ -94,6 +94,10 @@ namespace MacTheme.Theme
             pForm.Close();
         }
 
+        /// <summary>
+        /// Create everything with a drag and drop control, encapsulates the main form.
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnHandleCreated(EventArgs e)
         {
             Dock = DockStyle.Fill;

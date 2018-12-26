@@ -48,6 +48,10 @@ namespace MacTheme.Theme
             Invalidate();
         }
 
+        /// <summary>
+        /// Creates circle buttons and draws the character on hover
+        /// </summary>
+        /// <param name="pevent"></param>
         protected override void OnPaint(PaintEventArgs pevent)
         {
             base.OnPaint(pevent);
@@ -60,7 +64,7 @@ namespace MacTheme.Theme
             using (SolidBrush drawBrush = new SolidBrush(BtnColor))
             {
                 if(HoverTrigger)
-                  pevent.Graphics.DrawString($"{HoverChar}", drawFont, drawBrush, BtnLocation.X, BtnLocation.Y);
+                  pevent.Graphics.DrawString(HoverChar, drawFont, drawBrush, BtnLocation.X, BtnLocation.Y);
             }
 
             Text = String.Empty;
